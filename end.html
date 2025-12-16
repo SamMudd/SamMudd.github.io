@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Final Score</title>
+</head>
+<body>
+    <h1><u>Your IQ is: <span id="iq"></span></u></h1>
+</body>
+</html>
+
+<script src="script.js"></script>
+<script>
+    let finalScore = score;
+    let iq = scoretoiq(finalScore);
+    document.getElementById("iq").textContent = Math.round(iq);
+    localStorage.removeItem("score");
+</script>
+
+<style>
+    h1 {
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 100px;
+    }
+</style>
